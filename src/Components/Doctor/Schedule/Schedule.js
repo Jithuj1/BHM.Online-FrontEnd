@@ -38,10 +38,10 @@ function Schedule() {
   useEffect(() => {
     setU1(localStorage.getItem("user"));
     setU2(localStorage.getItem("doctor_id"));
-    axios.get(`http://127.0.0.1:8000/doctor/${doctorDetails}`).then((res) => {
+    axios.get(`http://bhmonline.tech/doctor/${doctorDetails}`).then((res) => {
       setProfile(res.data);
     });
-    axios.get("http://127.0.0.1:8000/schedule").then((res) => {
+    axios.get("http://bhmonline.tech/schedule").then((res) => {
       setSchedules(res.data);
     });
 
@@ -64,7 +64,7 @@ function Schedule() {
   const onHandleSubmit = () => {
     console.log(date, time1, time2);
     axios
-      .post("http://127.0.0.1:8000/schedule", {
+      .post("http://bhmonline.tech/schedule", {
         doctor: u1,
         date: date,
         start: time1,

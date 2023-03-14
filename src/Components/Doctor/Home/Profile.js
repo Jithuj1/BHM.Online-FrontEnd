@@ -13,7 +13,7 @@ function Profile() {
   const {doctorDetails, setDoctorDetails} = useContext(Doctor)  
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/doctor").then((res) => {
+    axios.get("http://bhmonline.tech/doctor").then((res) => {
       setProfile(res.data);
     });
 

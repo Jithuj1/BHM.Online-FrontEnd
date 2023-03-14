@@ -43,7 +43,7 @@ function Appointment() {
 
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/appointments").then((res) => {
+    axios.get("http://bhmonline.tech/appointments").then((res) => {
       setRows(res.data);
     });
     setDoctorId(localStorage.getItem("user"));
@@ -58,7 +58,7 @@ function Appointment() {
 
   function approveRequest() {
     axios
-      .put(`//127.0.0.1:8000/appointments/${approveId}`, {
+      .put(`http://bhmonline.tech/appointments/${approveId}`, {
         status: true,
       })
       .then((res) => {
@@ -79,7 +79,7 @@ function Appointment() {
 
   function deleteRequest() {
     console.log("reached");
-    axios.delete(`//127.0.0.1:8000/appointments/${deleteId}`).then((res) => {
+    axios.delete(`http://bhmonline.tech/appointments/${deleteId}`).then((res) => {
       setBoolean(!boolean);
       console.log(res);
       if (res.status == 200) {

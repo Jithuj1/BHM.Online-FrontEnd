@@ -32,7 +32,7 @@ function Consultation() {
 
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/notification").then((res) => {
+    axios.get("http://bhmonline.tech/notification").then((res) => {
       setNotifications(res.data.data);
     });
     setDock(localStorage.getItem("doctor_id"));
@@ -43,7 +43,7 @@ function Consultation() {
 
     if (room) {
       socket.current = new W3CWebSocket(
-        "ws://127.0.0.1:8000/ws/chat/" + room.id + "/" + uid + "/"
+        "ws:http://bhmonline.tech/ws/chat/" + room.id + "/" + uid + "/"
       );
 
       console.log(socket.current, "haii");
@@ -81,16 +81,16 @@ function Consultation() {
 
   function makeRoom(id, nid) {
     setUid(id);
-    axios.put(`http://127.0.0.1:8000/updateNotification/${nid}`, {
+    axios.put(`http://bhmonline.tech/updateNotification/${nid}`, {
       read: true,
     });
     console.log("uid", id, nid);
-    axios.get(`http://127.0.0.1:8000/get_room/${id}/${dock}`).then((res) => {
+    axios.get(`http://bhmonline.tech/get_room/${id}/${dock}`).then((res) => {
       setRoom(res.data);
       console.log('res', res.data)
       console.log("room", room)
     });
-    axios.get(`http://127.0.0.1:8000/patient/${id}`).then((res) => {
+    axios.get(`http://bhmonline.tech/patient/${id}`).then((res) => {
       setViewPatient(res.data);
     });
     setBool(!bool);

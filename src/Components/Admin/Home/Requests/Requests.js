@@ -62,7 +62,7 @@ function Requests() {
 
   function deleteRequest() {
     console.log("reached");
-    axios.delete(`//127.0.0.1:8000/doctor/${doctorId}`).then((res) => {
+    axios.delete(`http://bhmonline.tech/doctor/${doctorId}`).then((res) => {
       setBoolean(!boolean);
       console.log(res);
       if (res.status == 200) {
@@ -74,9 +74,9 @@ function Requests() {
 
   function approveRequest() {
     console.log("reached");
-    axios.get(`//127.0.0.1:8000/doctor/${approveId}`).then((res)=>  setVal(res.data.doctor_id.id)) 
+    axios.get(`http://bhmonline.tech/doctor/${approveId}`).then((res)=>  setVal(res.data.doctor_id.id)) 
     axios
-      .put(`//127.0.0.1:8000/patient/${val}`, {
+      .put(`http://bhmonline.tech/patient/${val}`, {
         status: true,
       })
       .then((res) => {
@@ -90,7 +90,7 @@ function Requests() {
   }
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/doctor").then((res) => {
+    axios.get("http://bhmonline.tech/doctor").then((res) => {
       setDoctors(res.data);
     });
   }, [boolean]);

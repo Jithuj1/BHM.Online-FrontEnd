@@ -11,7 +11,7 @@ function Hospital() {
   const [hospitals, setHospitals] = useState([]);
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/hospital").then((res) => {
+    axios.get("http://bhmonline.tech/hospital").then((res) => {
       setHospitals(res.data);
       console.log(hospitals);
     });
