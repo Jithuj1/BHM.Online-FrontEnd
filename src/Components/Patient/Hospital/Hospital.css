@@ -1,0 +1,28 @@
+.top2{
+    background-color:#bfb9b9;
+    background-size: cover;
+    width: 90vw;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    border-radius: 1rem;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 3.5rem;
+}
+.img{
+    border-radius: 1rem;
+}
+@media (max-width:1000px){
+    .top2{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

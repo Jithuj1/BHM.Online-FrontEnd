@@ -1,0 +1,227 @@
+.consult{
+    width: 100vw;
+    height: 86.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.consultClass{
+    width: 85vw;
+    height: 75vh;
+    background-color: #bfb9b9;
+    background-size: cover;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+.part1{
+    width: 25%;
+    border-radius: 10px 0px 0px 10px;
+
+}
+.part2{
+    width: 50%;
+    border-left:4px solid #aaabaf;
+    border-right:4px solid #aaabaf;
+}
+.part3{
+    width: 25%;
+    border-radius: 0px 10px 10px 0px;
+
+}
+.pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35%;
+    border-radius: 5px;
+}
+.dockdetail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.part3sub1{
+    height: 12%;
+    border-radius: 0px 10px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.part3sub2{
+    height: 88%;
+    border-radius: 0px 0px 10px 0px;
+
+}
+.search{
+    width: 80%;
+    height: 50%;
+    background-color: rgb(173, 178, 171);
+    border-radius: 6px;
+}
+.search:focus{
+    outline: none;
+    border: none;
+    background-color: rgb(173, 178, 171);
+    border-radius: 6px;
+}
+.search::placeholder{
+    color: black;
+}
+.docklist{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: .5rem;
+    cursor: pointer;
+}
+.shortimage{
+    width: 25%;
+    display: flex;
+    justify-content: end;
+    padding-right:.5rem ;
+}
+.dockname{
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: .6rem;
+    font-weight: 500;
+
+}
+.dockonline{
+    width: 10%;
+
+}
+.onlineIcon{
+    color: green;
+}
+
+.all{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.else{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.part2a{
+    height: 100%;
+}
+.part2sub1{
+    height: 86%;
+}
+.part2sub2{
+    height: 14%;
+    display: flex;
+    align-items: end;
+    border-top:2px solid #aaabaf;
+}
+.chatbox{
+    width: 100%;
+    height: 100%;
+
+}
+.submit{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.typeboxdesign{
+    height: 90%;
+    width: 90%;
+    margin-left: 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #bfb9b9;
+}
+.typeboxdesign:focus{
+    outline: none;
+}
+.typeboxdesign::placeholder{
+    color: black;
+}
+
+.chatboxheader{
+    height:  14%;
+    border-bottom:1px solid #aaabaf;
+    display: flex;
+}
+.onlineDockImage{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5px;
+}
+.namedock{
+    width: 60%;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    font-size: 16px;
+    font-weight: 500;
+}
+.chatboxcall{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.callIcon{
+    
+}
+.videoCallIcon{
+    
+}
+.chatboxcontent{
+    display: flex;
+    justify-content: center;
+    /* margin: 10px; */
+    overflow-y: scroll;
+    height: 82%;
+}
+.chatboxcontent::-webkit-scrollbar{
+    width: 5px;
+}
+.chatboxcontent::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+.chatboxcontent::-webkit-scrollbar-thumb {
+    background: #808082; 
+    border-radius: 10px;
+  }
+.chatOuterLine{
+    width: 97%;
+    
+}
+.sender{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 2px;
+}
+.receiver{
+    width:100%;
+    margin: 2px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+            

@@ -1,0 +1,52 @@
+.best{
+    font-weight:500;
+    font-size:2rem;
+    padding-left: 5rem;
+    padding-top: 1rem;
+    width: 50%;
+}
+.top{
+    height:100%;
+    overflow: hidden;
+}
+.card1{
+}
+.inside{
+    background-color:#d6d2d2 ;
+}
+.btn1{
+    align-content: center;
+    width: 100%;
+    background-color: #023262;
+}
+.img{
+    padding-left: 3rem;
+    padding-top: 1.5rem;
+}
+.topContent{
+    display: flex;
+    width: 100%;
+}
+.searchDock{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.typeDockName{
+    width: 20rem;
+    height: 2.5rem;
+    border-radius: 6px;
+    padding-left: 25px;
+    background-color: #d6d2d2;
+}
+.typeDockName:focus{
+    outline: none;
+    border: none;
+    background-color: #d6d2d2;
+    border-radius: 6px;
+    padding-left: 25px;
+}
+.typeDockName::placeholder{
+    color: black;
+}

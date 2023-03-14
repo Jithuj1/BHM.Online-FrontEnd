@@ -1,0 +1,17 @@
+.pink{
+    background-color: rgb(158, 172, 186);
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    padding-bottom: 2rem;
+
+}
+.top1{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

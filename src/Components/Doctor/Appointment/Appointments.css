@@ -1,0 +1,13 @@
+.appointmentTable{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.appointsub{
+    width: 80%;
+}
+.upcoming{
+    margin: 3rem;
+    font-size: 30px;
+    font-weight: 500;
+}

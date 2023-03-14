@@ -1,0 +1,175 @@
+.consult{
+    width: 100vw;
+    height: 86.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.consultClass{
+    width: 85vw;
+    height: 75vh;
+    background-size: cover;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+.part1{
+    width: 25%;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+    overflow: hidden;
+}
+.noti1{
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    font-weight: 500;
+}
+.noti2{
+    height: 85%;
+    overflow-y: scroll;
+}
+.noti2::-webkit-scrollbar{
+    width: 5px;
+}
+.noti2::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+.noti2::-webkit-scrollbar-thumb {
+    background: #808082; 
+    border-radius: 10px;
+  }
+.singleNotification{
+    margin-bottom: 10px;
+    padding:10px ;    
+    background-color: #aaabaf;
+}
+.notificationName{
+    font-size: medium;
+    width: 100%;
+    font-weight: 600;
+    margin-left: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.notificationParagraph{
+    margin-left: 10px;
+    font-size: medium;
+    margin-left: 30px;
+    color: rgb(40, 46, 42);
+}
+.notificationTime{
+    font-size: 14px;
+    color: rgb(109, 109, 175);
+}
+.notificationButtons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.part2{
+    width: 50%;
+    border-left:4px solid #aaabaf;
+    border-right:4px solid #aaabaf;
+}
+.part3{
+    width: 25%;
+    border-radius: 0px 10px 10px 0px;
+}
+.part3sub1{
+    height: 12%;
+    border-radius: 0px 10px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #aaabaf;
+    
+}
+.part3sub2{
+    height: 88%;
+    border-radius: 0px 0px 10px 0px;
+
+}
+.dockonline{
+    width: 10%;
+
+}
+.onlineIcon{
+    color: green;
+}
+
+
+.part2sub1{
+    height: 86%;
+}
+.part2sub2{
+    height: 14%;
+    display: flex;
+    border-top:1px solid #aaabaf;
+}
+.chatbox{
+    width: 100%;
+    height: 100%;
+
+}
+.submit{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.typeboxdesign:focus{
+    outline: none;
+}
+
+.chatboxheader{
+    height:  14%;
+    border-bottom:1px solid #aaabaf;
+    display: flex;
+}
+
+.chatboxcontent{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.chatOuterLine{
+    width: 97%;
+    
+}
+.sender{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 3px;
+}
+.receiver{
+    width:100%;
+    margin: 2px;
+    display: flex;
+    justify-content: flex-start;
+}
+.textarea{
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.textareacontent{
+    background-color: rgb(173, 166, 166);
+}
+textarea{
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    padding: 10px;
+    background-color: rgb(74, 127, 112);
+}
