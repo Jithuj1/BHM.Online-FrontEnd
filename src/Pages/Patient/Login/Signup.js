@@ -48,7 +48,7 @@ export default function SignUp() {
         alert('Blank Space Not Allowed')
     }
     else{
-      axios.post('http://127.0.0.1:8000/patient',{
+      axios.post('http://bhmonline.tech/patient',{
         first_name:details.firstName,
         last_name:details.lastName,
         email:details.email ,
