@@ -64,11 +64,11 @@ function ConsultPage() {
       setUid(parseInt(localStorage.getItem("patient")));
     }
 
-    axios.get("http://bhmonline.tech/doctor").then((res) => {
+    axios.get("https://bhmonline.tech/doctor").then((res) => {
       setDock(res.data);
     });
 
-    axios.get("http://bhmonline.tech/schedule").then((res) => {
+    axios.get("https://bhmonline.tech/schedule").then((res) => {
       setSchedule(res.data);
     });
   }, []);
@@ -78,7 +78,7 @@ function ConsultPage() {
     console.log("websocket is opening");
     if (room) {
       socket.current = new W3CWebSocket(
-        "ws:http://bhmonline.tech/ws/chat/" + room + "/" + uid + "/"
+        "ws:https://bhmonline.tech/ws/chat/" + room + "/" + uid + "/"
       );
       console.log(socket, "hey");
       socket.current.onopen = () => {
@@ -116,7 +116,7 @@ function ConsultPage() {
     setOnlineId(dockList);
     console.log(onlineId, "hello");
     console.log(id);
-    axios.get(`http://bhmonline.tech/doctor/${id}`).then((res) => {
+    axios.get(`https://bhmonline.tech/doctor/${id}`).then((res) => {
       setViewDock(res.data);
     });
   }
@@ -134,7 +134,7 @@ function ConsultPage() {
     console.log("patient", uid);
     console.log(videoCallRoomId)
     axios
-      .post("http://bhmonline.tech/rooms", {
+      .post("https://bhmonline.tech/rooms", {
         room_name: viewDock.doctor_id.first_name,
         sender: uid,
         receiver: viewDock.doctor_id.id,
@@ -144,11 +144,11 @@ function ConsultPage() {
         setRoom(res.data);
         setApproveModal(false);
       });
-    axios.post("http://bhmonline.tech/notification", {
+    axios.post("https://bhmonline.tech/notification", {
       patient: uid,
       doctor: viewDock.doctor_id.id,
     });
-    axios.get(`http://bhmonline.tech/doctor/${viewDock.id}`).then((res) => {
+    axios.get(`https://bhmonline.tech/doctor/${viewDock.id}`).then((res) => {
       setOnlineDock(res.data);
     });
   }
@@ -157,7 +157,7 @@ function ConsultPage() {
     var maxNumber = 9999;
     const num = Math.floor((Math.random() * maxNumber) + 1);
     e.preventDefault()
-    axios.put(`http://bhmonline.tech/update_room/${room}`, {
+    axios.put(`https://bhmonline.tech/update_room/${room}`, {
       videoId: num
     }).then((res)=>{
       navigate(`/room/${num}`)

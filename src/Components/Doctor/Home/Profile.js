@@ -13,7 +13,7 @@ function Profile() {
   const {doctorDetails, setDoctorDetails} = useContext(Doctor)  
 
   useEffect(() => {
-    axios.get("http://bhmonline.tech/doctor").then((res) => {
+    axios.get("https://bhmonline.tech/doctor").then((res) => {
       setProfile(res.data);
     });
 

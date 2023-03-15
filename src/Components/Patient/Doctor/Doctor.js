@@ -27,7 +27,7 @@ function Doctor() {
   }));
 
   useEffect(() => {
-    axios.get("http://bhmonline.tech/doctor").then((res) => {
+    axios.get("https://bhmonline.tech/doctor").then((res) => {
       setDoctor(res.data);
       console.log(doctor);
     });

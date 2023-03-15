@@ -86,7 +86,7 @@ export default function SignUp() {
       formField.append('is_staff', true)
       formField.append('image', image)
       axios
-        .post("http://bhmonline.tech/doctor", formField)
+        .post("https://bhmonline.tech/doctor", formField)
         .then((res) => {
           console.log(res.status);
           console.log(res.data);
@@ -106,11 +106,11 @@ export default function SignUp() {
   // select box one
 
   useEffect(() => {
-    axios.get("http://bhmonline.tech/hospital").then((res) => {
+    axios.get("https://bhmonline.tech/hospital").then((res) => {
       console.log(res.data);
       setNames(res.data);
     });
-    axios.get("http://bhmonline.tech/department").then((res) => {
+    axios.get("https://bhmonline.tech/department").then((res) => {
       console.log(res.data);
       setDept(res.data);
     });

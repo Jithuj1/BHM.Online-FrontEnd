@@ -62,7 +62,7 @@ function Requests() {
 
   function deleteRequest() {
     console.log("reached");
-    axios.delete(`http://bhmonline.tech/doctor/${doctorId}`).then((res) => {
+    axios.delete(`https://bhmonline.tech/doctor/${doctorId}`).then((res) => {
       setBoolean(!boolean);
       console.log(res);
       if (res.status == 200) {
@@ -74,9 +74,9 @@ function Requests() {
 
   function approveRequest() {
     console.log("reached");
-    axios.get(`http://bhmonline.tech/doctor/${approveId}`).then((res)=>  setVal(res.data.doctor_id.id)) 
+    axios.get(`https://bhmonline.tech/doctor/${approveId}`).then((res)=>  setVal(res.data.doctor_id.id)) 
     axios
-      .put(`http://bhmonline.tech/patient/${val}`, {
+      .put(`https://bhmonline.tech/patient/${val}`, {
         status: true,
       })
       .then((res) => {
@@ -90,7 +90,7 @@ function Requests() {
   }
 
   useEffect(() => {
-    axios.get("http://bhmonline.tech/doctor").then((res) => {
+    axios.get("https://bhmonline.tech/doctor").then((res) => {
       setDoctors(res.data);
     });
   }, [boolean]);

@@ -66,16 +66,16 @@ function Appointment() {
       navigate("/patient_login");
     } else {
     }
-    axios.get("http://bhmonline.tech/doctor").then((res) => {
+    axios.get("https://bhmonline.tech/doctor").then((res) => {
       console.log(res.data);
       setDock(res.data);
     });
-    axios.get("http://bhmonline.tech/department").then((res) => {
+    axios.get("https://bhmonline.tech/department").then((res) => {
       console.log(res.data);
       setDept(res.data);
     });
     setPatientId(localStorage.getItem("patient"));
-    axios.get("http://bhmonline.tech/appointments").then((res) => {
+    axios.get("https://bhmonline.tech/appointments").then((res) => {
       setRows(res.data);
     });
   }, [reload]);
@@ -118,7 +118,7 @@ function Appointment() {
 
   function BookAppointment() {
     axios
-      .post("http://bhmonline.tech/appointments", {
+      .post("https://bhmonline.tech/appointments", {
         doctor: doctor,
         department: department_id,
         date: date,
@@ -140,7 +140,7 @@ function Appointment() {
   }
 
   function DeleteAppointment (){
-    axios.delete(`http://bhmonline.tech/appointments/${deleteAppointmentId}`).then((res)=>{
+    axios.delete(`https://bhmonline.tech/appointments/${deleteAppointmentId}`).then((res)=>{
       setReload(!reload);
       setDeleteModal(!deleteModal)
     })

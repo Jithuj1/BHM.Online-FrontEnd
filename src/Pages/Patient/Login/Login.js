@@ -27,7 +27,7 @@ export default function SignIn() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log(data.get("email"));
-    axios.post('http://bhmonline.tech/api/token/', {
+    axios.post('https://bhmonline.tech/api/token/', {
       username:data.get('email'),
       password:data.get('password')
     }).then((res)=>{

@@ -59,7 +59,7 @@ function Requests() {
 
   function deleteRequest() {
     console.log("reached");
-    axios.delete(`http://bhmonline.tech/department/${doctorId}`).then((res) => {
+    axios.delete(`https://bhmonline.tech/department/${doctorId}`).then((res) => {
       console.log('here')
       setBoolean(!boolean);
       console.log(res);
@@ -72,7 +72,7 @@ function Requests() {
 
   function deleteHospital() {
     console.log("reached");
-    axios.delete(`http://bhmonline.tech/hospital/${approveId}`).then((res) => {
+    axios.delete(`https://bhmonline.tech/hospital/${approveId}`).then((res) => {
       console.log('here')
       console.log(res)
       setBoolean(!boolean);
@@ -87,10 +87,10 @@ function Requests() {
   function approveRequest() {
     console.log("reached");
     axios
-      .get(`http://bhmonline.tech/doctor/${approveId}`)
+      .get(`https://bhmonline.tech/doctor/${approveId}`)
       .then((res) => setVal(res.data.doctor_id.id));
     axios
-      .put(`http://bhmonline.tech/patient/${val}`, {
+      .put(`https://bhmonline.tech/patient/${val}`, {
         status: true,
       })
       .then((res) => {
@@ -107,14 +107,14 @@ function Requests() {
   const [hospital, setHospital] = useState([]);
 
   useEffect(() => {
-    axios.get("http://bhmonline.tech/doctor").then((res) => {
+    axios.get("https://bhmonline.tech/doctor").then((res) => {
       setDoctors(res.data);
     });
-    axios.get("http://bhmonline.tech/department").then((res) => {
+    axios.get("https://bhmonline.tech/department").then((res) => {
       setDept(res.data);
       console.log(dept);
     });
-    axios.get("http://bhmonline.tech/hospital").then((res) => {
+    axios.get("https://bhmonline.tech/hospital").then((res) => {
       setHospital(res.data);
     });
   }, [boolean]);
@@ -128,7 +128,7 @@ function Requests() {
 
     function handleSubmit(){
         console.log(first)
-        axios.post("http://bhmonline.tech/department", {name:first}).then((res)=>{
+        axios.post("https://bhmonline.tech/department", {name:first}).then((res)=>{
             console.log(res)
             if(res.data.status == "ok"){
                 console.log('jithu')

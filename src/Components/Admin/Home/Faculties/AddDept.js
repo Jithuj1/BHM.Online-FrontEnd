@@ -45,7 +45,7 @@ function AddDept() {
     formField.append('category', "Private Hospital")
 
     
-    axios.post("http://bhmonline.tech/hospital", formField).then((res)=>{
+    axios.post("https://bhmonline.tech/hospital", formField).then((res)=>{
       console.log(res)
       if (res.status == 200){
         alert("Registered Successfully")

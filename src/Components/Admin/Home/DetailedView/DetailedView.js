@@ -26,7 +26,7 @@ function DetailedView(props) {
     const[values,setValues] = React.useState({name:'',email:'',phone:'',dept:'',hospital:'', exp:'',address:''})
     console.log('id',props.val)
     useEffect(() => {
-        axios.get(`http://bhmonline.tech/doctor/${props.val}`).then((res) => {
+        axios.get(`https://bhmonline.tech/doctor/${props.val}`).then((res) => {
             console.log(res.data)
             // let dict = JSON.parse(res.data)
             setComp(res.data.department);
