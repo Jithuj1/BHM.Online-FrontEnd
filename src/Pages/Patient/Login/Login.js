@@ -35,8 +35,20 @@ export default function SignIn() {
       if(res.statusText=="OK"){
         let values = res.data;
         if (jwt_decode(values.access).admin && jwt_decode(values.access).staff){
+          localStorage.setItem(
+            "admin",
+            JSON.stringify({
+              login: res.data.access,
+            })
+          );
           navigate('/admin_home')
         }else if (jwt_decode(values.access).staff){
+          localStorage.setItem(
+            "doctor",
+            JSON.stringify({
+              login: res.data.access,
+            })
+          );
           navigate('/doctor_home')
         }
          else {

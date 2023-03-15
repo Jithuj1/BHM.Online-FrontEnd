@@ -20,7 +20,7 @@ function Navbar() {
     useEffect(() => {
       const user = JSON.parse(localStorage.getItem('admin'));
       if (!user) {
-       navigate("/admin")
+       navigate("/patient_login")
     }}, []);
 
     function logout (){
