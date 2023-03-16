@@ -26,6 +26,7 @@ function AddDept() {
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
+    console.log('hereis')
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
@@ -49,7 +50,7 @@ function AddDept() {
       console.log(res)
       if (res.status == 200){
         alert("Registered Successfully")
-        navigate("/faculties")
+        navigate("/admin_home")
       }
       if (res.data == "already"){
         alert("Hospital Already Registered")

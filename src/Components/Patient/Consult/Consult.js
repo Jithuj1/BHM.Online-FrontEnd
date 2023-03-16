@@ -78,7 +78,7 @@ function ConsultPage() {
     console.log("websocket is opening");
     if (room) {
       socket.current = new W3CWebSocket(
-        "ws:https://bhmonline.tech/ws/chat/" + room + "/" + uid + "/"
+        "wss:https://bhmonline.tech/ws/chat/" + room + "/" + uid + "/"
       );
       console.log(socket, "hey");
       socket.current.onopen = () => {
