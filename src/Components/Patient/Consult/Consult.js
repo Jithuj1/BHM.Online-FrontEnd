@@ -78,7 +78,7 @@ function ConsultPage() {
     console.log("websocket is opening");
     if (room) {
       socket.current = new W3CWebSocket(
-        "wss:https://bhmonline.tech/ws/chat/" + room + "/" + uid + "/"
+        "wss://bhmonline.tech/ws/chat/" + room + "/" + uid + "/"
       );
       console.log(socket, "hey");
       socket.current.onopen = () => {
@@ -132,7 +132,7 @@ function ConsultPage() {
   function makeRoom() {
     console.log("dcok", viewDock.doctor_id.id);
     console.log("patient", uid);
-    console.log(videoCallRoomId)
+    console.log('hello', videoCallRoomId)
     axios
       .post("https://bhmonline.tech/rooms", {
         room_name: viewDock.doctor_id.first_name,
