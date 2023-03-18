@@ -41,7 +41,7 @@ function Consultation() {
   useEffect(() => {
     console.log("websocket is opening");
 
-    if (room) {
+    if (room){
       socket.current = new W3CWebSocket(
         "wss://bhmonline.tech/ws/chat/" + room.id + "/" + uid + "/"
       );
