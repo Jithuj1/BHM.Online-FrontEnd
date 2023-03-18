@@ -43,7 +43,7 @@ function Consultation() {
 
     if (room) {
       socket.current = new W3CWebSocket(
-        "wss:https://bhmonline.tech/ws/chat/" + room.id + "/" + uid + "/"
+        "wss://www.bhmonline.tech/ws/chat/" + room.id + "/" + uid + "/"
       );
 
       console.log(socket.current, "haii");
