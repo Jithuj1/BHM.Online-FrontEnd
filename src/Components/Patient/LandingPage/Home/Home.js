@@ -8,6 +8,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -45,6 +46,7 @@ function getStyles(name, personName, theme) {
 function Home() {
   const theme = useTheme();
   const [personName, setPersonName] = React.useState([]);
+  const navigate = useNavigate()
 
   const handleChange = (event) => {
     const {
@@ -86,61 +88,26 @@ function Home() {
             Book An Appointment Now
           </h2>
           <div className="select">
+            <span>Are you a doctor ... ?</span>{" "}
             <span>
-              <FormControl sx={{ m: 1, width: 150 }}>
-                <InputLabel id="demo-multiple-name-label">
-                  Select Date
-                </InputLabel>
-                <Select
-                  labelId="demo-multiple-name-label"
-                  id="demo-multiple-name"
-                  multiple
-                  value={personName}
-                  onChange={handleChange}
-                  input={<OutlinedInput label="Name" />}
-                  MenuProps={MenuProps}
-                >
-                  {names.map((name) => (
-                    <MenuItem
-                      key={name}
-                      value={name}
-                      style={getStyles(name, personName, theme)}
-                    >
-                      {name}
-                    </MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
-            </span>
-            <span>
-              <FormControl sx={{ m: 1, width: 150 }}>
-                <InputLabel id="demo-multiple-name-label">
-                  Select Doctor
-                </InputLabel>
-                <Select
-                  labelId="demo-multiple-name-label"
-                  id="demo-multiple-name"
-                  multiple
-                  value={personName}
-                  onChange={handleChange}
-                  input={<OutlinedInput label="Name" />}
-                  MenuProps={MenuProps}
-                >
-                  {names.map((name) => (
-                    <MenuItem
-                      key={name}
-                      value={name}
-                      style={getStyles(name, personName, theme)}
-                    >
-                      {name}
-                    </MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
-            </span>{" "}
-            <span>
-            <Button sx={{backgroundColor:"rgb(208, 186, 186)", border:"none"}} variant="outlined" size="large">BOOK</Button>
-
+              <Button
+                sx={{
+                  ":hover": {
+                    bgcolor: "#488A99",
+                    color: "white",
+                  },
+                  backgroundColor: "#488A99",
+                  marginLeft: "5rem",
+                  width: "15rem",
+                  border: "none",
+                  color: "white",
+                }}
+                variant="contained"
+                size="large"
+                onClick={()=>navigate('/doctor_home')}
+              >
+                For doctors only
+              </Button>
             </span>
           </div>
         </div>

@@ -34,7 +34,7 @@ function Navbar() {
         <Box sx={{ flexGrow: 1 }}>
           <AppBar
             position="static"
-            sx={{ padding: "1rem", backgroundColor: "#666666" }}
+            sx={{ padding: "1rem", backgroundColor: "rgb(148, 143, 143)" }}
           >
             <Toolbar>
               <IconButton

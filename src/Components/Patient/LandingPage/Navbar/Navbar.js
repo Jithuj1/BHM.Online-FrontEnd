@@ -182,7 +182,7 @@ export default function PrimarySearchAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{padding:"1rem", backgroundColor:"#666666"}}>
+      <AppBar position="static" sx={{padding:"1rem", backgroundColor:"rgb(148, 143, 143)"}}>
         <Toolbar>
           <LocalHospitalIcon sx={{marginLeft:"2rem"}}/>
           <Typography

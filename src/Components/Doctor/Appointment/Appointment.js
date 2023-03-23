@@ -182,7 +182,7 @@ function Appointment() {
         <div>
           <TableContainer component={Paper}>
             <Table
-              sx={{ minWidth: 650, backgroundColor: "#f0f8ff" }}
+              sx={{ minWidth: 650, backgroundColor: "rgb(183, 177, 177)" }}
               size="small"
               aria-label="a dense table"
             >
@@ -252,7 +252,7 @@ function Appointment() {
         <div>
           <TableContainer component={Paper}>
             <Table
-              sx={{ minWidth: 650, backgroundColor: "#f0f8ff" }}
+              sx={{ minWidth: 650, backgroundColor: "rgb(183, 177, 177)" }}
               size="small"
               aria-label="a dense table"
             >
