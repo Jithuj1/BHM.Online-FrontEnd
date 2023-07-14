@@ -426,6 +426,7 @@ function ConsultPage() {
                   return (
                     <div>
                       {schedule.map((k) => {
+                        
                         if (i.id == k.doctor) {
                           if (now == k.date) {
                             if (k.start < showTime && showTime < k.end) {

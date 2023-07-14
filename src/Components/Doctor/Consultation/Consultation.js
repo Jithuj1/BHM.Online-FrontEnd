@@ -45,7 +45,6 @@ function Consultation() {
       socket.current = new W3CWebSocket(
         "wss://bhmonline.tech/ws/chat/" + room.id + "/" + uid + "/"
       );
-
       console.log(socket.current, "haii");
       socket.current.onopen = () => {
         console.log("WebSocket Client Connected");

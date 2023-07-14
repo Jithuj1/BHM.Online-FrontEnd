@@ -12,15 +12,12 @@ import { useState, useEffect } from "react";
 
 
 function Navbar() {
-
-
     const navigate = useNavigate();
-
 
     useEffect(() => {
       const user = JSON.parse(localStorage.getItem('doctor'));
       if (!user) {
-       navigate("/doctor_login")
+       navigate('/patient_login');
     }}, []);
 
     function logout (){

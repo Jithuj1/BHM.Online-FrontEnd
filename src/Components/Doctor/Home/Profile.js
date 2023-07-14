@@ -18,8 +18,9 @@ function Profile() {
     });
 
     const user = JSON.parse(localStorage.getItem("doctor"));
-    console.log(user);
-    setDecoded(jwtDecode(user.login));
+    if (user){
+      setDecoded(jwtDecode(user.login));
+    }
   }, []);
 
   return (

@@ -10,23 +10,20 @@ import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-
 function Navbar() {
+  const navigate = useNavigate();
 
-
-    const navigate = useNavigate();
-
-
-    useEffect(() => {
-      const user = JSON.parse(localStorage.getItem('admin'));
-      if (!user) {
-       navigate("/patient_login")
-    }}, []);
-
-    function logout (){
-      localStorage.removeItem("admin");
-      navigate("/")
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("admin"));
+    if (!user) {
+      navigate("/patient_login");
     }
+  }, []);
+
+  function logout() {
+    localStorage.removeItem("admin");
+    navigate("/");
+  }
 
   return (
     <div>
@@ -50,17 +47,26 @@ function Navbar() {
                 Welcome Administrator
               </Typography>
               <div className="optn">
-              {/* <div className="suboptn">
+                {/* <div className="suboptn">
                   <Button onClick={()=>navigate("/admin_home")} color="inherit">Home</Button>
                 </div> */}
                 <div className="suboptn">
-                  <Button onClick={()=>navigate("/admin_home") } color="inherit">Home</Button>
+                  <Button
+                    onClick={() => navigate("/admin_home")}
+                    color="inherit"
+                  >
+                    Home
+                  </Button>
                 </div>
                 <div className="suboptn">
-                  <Button onClick={()=>navigate("/requests")} color="inherit">Requests</Button>
+                  <Button onClick={() => navigate("/requests")} color="inherit">
+                    Requests
+                  </Button>
                 </div>
                 <div className="suboptn">
-                  <Button onClick={logout} color="inherit">Logout</Button>
+                  <Button onClick={logout} color="inherit">
+                    Logout
+                  </Button>
                 </div>
               </div>
             </Toolbar>
